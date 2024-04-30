@@ -20,7 +20,7 @@ none yet.. At the moment this extension only provides "Blitz Search This:
 
 ## Release Notes
 
-### 0.0.4
+### 0.0.5
 
 Cleanup ReadMe.mD
 
