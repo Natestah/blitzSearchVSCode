@@ -8,7 +8,8 @@ Blitz Search is not yet released, reach out if you'd like to participate in earl
 
 * See [natestah.com[(https://natestah.com/) for description of the standalone search tool.
 
-![VSCOde](images/vscodeextension.gif)
+![VSCodeExtension](https://github.com/Natestah/blitzSearchVSCode/assets/11800697/a89e34c9-2419-4c1b-8ecf-eb0632c6586e)
+
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
