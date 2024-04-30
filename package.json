@@ -2,8 +2,10 @@
   "name": "blitzsearch",
   "displayName": "BlitzSearch",
   "description": "Find Stuff Fast",
-  "publisher" : "Nathan Silvers",
-  "version": "0.0.1",
+  "icon": "images/Blitz128.png",
+  "publisher" : "NathanSilvers",
+  "repository": "https://github.com/Natestah/blitzSearchVSCode",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.88.0"
   },
@@ -16,7 +18,7 @@
     "commands": [
       {
         "command": "blitzsearch.searchThis",
-        "title": "Blits Search This"
+        "title": "Blitz Search This"
       }
     ]
   },
