@@ -1,24 +1,54 @@
 # Blitz Search
 
-Blitz Search is a standalone product, this is an extension to enable a workflow within VS code to work with the external search tool. 
+Blitz Search is fast file searching tool to help with out of context searches.
 
-Blitz Search is not yet released, reach out if you'd like to participate in early testing.
+Finding Words-on-a line instead of complex regular expressions or wildcards, yields improved search results.
+
+see sample here for Quake 3 source code:
+
+![Blitz Search In motion](https://blitzsearch.s3.us-east-2.amazonaws.com/AnimateBlitz.gif)
+
+
+## Blitz Search This Command
+
+Blitz Search This Command Finds the word at the caret:
+
+![Blitz Search In motion](https://blitzsearch.s3.us-east-2.amazonaws.com/ThemeMatch.png)
 
 ## Features
 
-* See [natestah.com[(https://natestah.com/) for description of the standalone search tool.
+* Find Text in Files faster
+* Real time results update while you type.
+* Large volumes of files quickly.
+* Syntax Highlighting in results, bold highlights, easy on the eyes.
+* Find words on a line.
+* Git Ignore file filter reduces workload and Clutter in results.
+* Auto-Human text file discovery Takes burden off Filtering.
+* Quality of Life focused.
 
-![VSCodeExtension](https://github.com/Natestah/blitzSearchVSCode/assets/11800697/a89e34c9-2419-4c1b-8ecf-eb0632c6586e)
 
 ## Requirements
-
-Blitz Search installer, TBA [natestah.com[(https://natestah.com/)
+> Windows x64 only, Download and install the Free-to-Play Companion application Blitz Search From
+>
+> [natestah.com](https://natestah.com/)
 
 ## Known Issues
 
-none yet.. At the moment this extension only provides "Blitz Search This:
+> Blitz Search currently has a small user base (friends). 
+> 
+> [Blitz Search Discord](https://discord.com/invite/UYPwQY9ngm)
+>
+> [r/BlitzSearch](https://www.reddit.com/r/BlitzSearch/)
 
 ## Release Notes
+
+### 0.0.7
+
+Blitz Search is now a signed executable, I am here simply to update the description.
+
+### 0.0.6
+
+When paired with Blitz 0.0.13 + running the command will now start the executable too. Previously it was required to be running.
 
 ### 0.0.5
 

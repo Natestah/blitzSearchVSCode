@@ -23,12 +23,22 @@ export function activate(context: vscode.ExtensionContext)
 			let stringname = process.env.APPDATA;
 			var path = require('path');
 
+
+			let exeDir = process.env.PROGRAMFILES;
+			const blitzPath = path.join(exeDir,"Blitz","Blitz.exe");
+
+
 			const userPath = path.join(stringname,"NathanSilvers","POORMANS_IPC");
 
-			if( !fs.existsSync(userPath))
+			if( !fs.existsSync(blitzPath))
 			{
 				vscode.window.showErrorMessage("Visit https://natestah.com to install Blitz Search Tool..");
 				return;
+			}
+
+			if( !fs.existsSync(userPath))
+			{
+				fs.mkDirSync(userPath, { recursive:true });
 			}
 
 			const fullpath = path.join(userPath, "SET_SEARCH.txt");
@@ -48,6 +58,11 @@ export function activate(context: vscode.ExtensionContext)
 				let wholeWord = "@" + document.getText(wordRange);
 				fs.writeFileSync(fullpath, wholeWord);
 			}
+
+			const spawn = require('child_process').spawn;
+			spawn(blitzPath);
+
+
 		}
 	});
 
