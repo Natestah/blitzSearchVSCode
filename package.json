@@ -1,11 +1,11 @@
 {
   "name": "blitzsearch",
   "displayName": "BlitzSearch",
-  "description": "Find Stuff Fast",
+  "description": "Luxury Search - More than a fast real-time search result, Blitz Search sits in its own application with a focus on search!",
   "icon": "images/Blitz128.png",
   "publisher" : "NathanSilvers",
   "repository": "https://github.com/Natestah/blitzSearchVSCode",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "engines": {
     "vscode": "^1.88.0"
   },
@@ -19,6 +19,10 @@
       {
         "command": "blitzsearch.searchThis",
         "title": "Blitz Search This"
+      },
+      {
+        "command": "blitzsearch.replaceThis",
+        "title": "Blitz Replace This"
       }
     ]
   },
@@ -44,7 +48,7 @@
     "ts-loader": "^9.5.1",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
-    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.3.9"
   }
 }
