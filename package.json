@@ -1,18 +1,18 @@
 {
   "name": "blitzsearch",
   "displayName": "BlitzSearch",
-  "description": "Luxury Search - More than a fast real-time search result, Blitz Search sits in its own application with a focus on search!",
+  "description": "Blitz Search aims to be a full replacement for Find-in-files, Free and open sourced, it offers some things that are missing from the built in search on VS Code.",
   "icon": "images/Blitz128.png",
   "publisher" : "NathanSilvers",
   "repository": "https://github.com/Natestah/blitzSearchVSCode",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "engines": {
     "vscode": "^1.88.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [ "onStartupFinished" ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -23,6 +23,10 @@
       {
         "command": "blitzsearch.replaceThis",
         "title": "Blitz Replace This"
+      },
+      {
+        "command": "blitzsearch.configureTheme",
+        "title": "Blitz Configure Theme (Match Theme)"
       }
     ]
   },

@@ -1,38 +1,47 @@
 # Blitz Search
 
-Blitz Search is an external Tool that provides a dialogue for search much the same as JetBrains IDE's. With this you can slim down your sidebar and have an improved search experience.
+Blitz Search is intended to be a full replacement for Find-in-Files and Replace in files.
 
-It is intended to be a full replacement for Find-in-Files and Replace in files, You can rebind those hotkeys or make new ones.
+When you install this you will be directed to install the companion app at https://natestah.com , this is 100% free and Open sourced at https://github.com/Natestah/BlitzSearch
 
-The query format is words on a line based instead of literal by default, though a literal option is available.
+The installer There is Signed With Extended Validation of Natestah LLC
 
-# Blitz Search is both Fast and Readable:
+
+## Features
+
+* Find words on a line by default ( Literal and Regex are available too )
+* Find Text in Files faster, by retaining index in memory AND using the quickest form of Serialization for recalling old sessions.  Blits Search is very fast! 
+* Real time results update while you type.  
+* Search Large volumes of files quickly. 
+* Syntax Highlighting + Stong results highlights.
+* .GitIgnore / .BlitzIgnore file filter reduces workload and Clutter in results.
+* Auto-Human text file filtering Takes burden off Filtering.  ( Think \*.\*, but without worry about binary .exe's slowing down the search )
+* FileName filter is a word on line filters taking the same query "\path_name\ @.cs|@.xaml". Only use it when results need filtering.
+* Quality of Life focused, Community Driven features ( see Discord invite )
+
+# Fast and Readable
+
+Much care has been put in how the results update, for example real time updates can be a nuisance if presented too fast.  Here we add something like 100-200 MS too keep it from flickering.
+
+See example:
 
 ![Blitz Search In motion](https://blitzsearch.s3.us-east-2.amazonaws.com/AnimateBlitzUpdated.gif)
 
-# Words on a line query is default
 
-Using Modern C# as an example for a search that's hard with traditional search
+# Configure Sets of Paths, with Icons
 
-```csharp
-    var myListOfVegetables = new List<string>();
-    List<string> myListOfVegetables = new();
-    List<string> myListOfVegetables = new List<string>();
-```
+Know what set of tools you are searching at a glance wtih a visual representation ( use your projects icon ).
 
-I know I have a "list" of "vegetables" in my code somewhere. I don't remember if I called it "myVegetableList" or "myListOfVegetables".  I don't remember if I declared it using modern CSharp or old.  "List\*Vegetables" followed by "Vegetables\*list".  Or what's worse is I want to farther narrow this down to the instancing by introducing "new" to the query.  What does that look like in traditional search?  
+[Watch Youtube Quick Scope Demo](https://youtube.com/shorts/k2wyDA6onqM)
 
-With Blitz the query here is "vegetables new list" and that matches all those things.
-
-
-# Configurable Sets of Paths, with Icons to boldly Show what scopes you are looking at ( click image for example ).
-
-[![Blitz SearchQuickScope](https://blitzsearch.s3.us-east-2.amazonaws.com/BlitzQuickScope.png)](https://youtube.com/shorts/k2wyDA6onqM)
+![Blitz SearchQuickScope](https://blitzsearch.s3.us-east-2.amazonaws.com/BlitzQuickScope.png)
 
 
 ## Blitz Search This Command
 
-Blitz Search This Command Finds ( find it in command pallete "Blitz Search This" ) the word at the caret:
+Command Name is  "Blitz Search This" 
+
+This Command Finds ( find it in command pallete "Blitz Search This" ) the word at the caret:
 
 ![Blitz Search In motion](https://blitzsearch.s3.us-east-2.amazonaws.com/ThemeMatchUpdated.png)
 
@@ -42,28 +51,16 @@ Blitz Replace Command Frames up a Replacement Query, Replace can be either "Word
 
 ![Blitz Search In motion](https://blitzsearch.s3.us-east-2.amazonaws.com/BlitzReplaceWBG.png)
 
-## Features
-
-* Find words on a line by default ( Literal and Regex are available too )
-* Find Text in Files faster, by retaining index in memory AND using the quickest form of Serialization for recalling old sessions.  Blits Search is very fast! 
-* Real time results update while you type.  
-* Large volumes of files quickly. 
-* Syntax Highlighting in results, bold highlights, easy on the eyes.
-* .GitIgnore / .BlitzIgnore file filter reduces workload and Clutter in results.
-* Auto-Human text file discovery Takes burden off Filtering.  There is no file extension here.
-* FileName filter is a word on line filters taking the same query "\path_name\ @.cs|@.xaml". Only use it when results need filtering.
-* Quality of Life focused, Community Driven features ( see Discord invite )
-
 
 ## Requirements
-> Windows x64 only, Download and install the FREE Companion application Blitz Search, Reasonably priced Premium search subscription for Upgraded Theme selection and Replace functionality.
+> Windows x64 only, Download and install the FREE Companion application Blitz Search.
 >
 > Download from
-> [natestah.com](https://natestah.com/)
+> [natestah.com](https://natestah.com/download)
 
 ## Known Issues
 
-> Blitz Search currently has a small user base (friends).  Help me get the word out, like and subscribe. leave a review..
+> Small user base (friends).  Please help me make social media noise and get the word out!
 > 
 > [Blitz Search Discord](https://discord.com/invite/UYPwQY9ngm)
 >
@@ -77,6 +74,11 @@ Blitz Replace Command Frames up a Replacement Query, Replace can be either "Word
 [![BlitzSearchYouTube.png](https://blitzsearch.s3.us-east-2.amazonaws.com/BlitzSearchYouTube.png 'Blitz Search Youtube Channel')](https://blitzsearch.s3.us-east-2.amazonaws.com/BlitzSearchYouTube.png)
 
 ## Release Notes
+### 0.0.10
+
+Updating ReadMe to reflect that Blitz Search is now 100% free AND open source.
+
+Selecting Results will open the preview pane In VS Code, Much the same as selecting results internally.
 
 ### 0.0.9
 
