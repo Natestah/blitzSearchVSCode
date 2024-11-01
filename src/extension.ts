@@ -6,6 +6,33 @@ import { Uri,TextDocumentShowOptions  } from 'vscode';
 import exp from 'constants';
 import { Console } from 'console';
 
+const path = require('path');
+const fs = require('fs');
+const exeDir = process.env.PROGRAMFILES;
+const appDataPath = process.env.APPDATA;
+
+function blitzPathString() : string
+{
+	return path.join(exeDir,"Blitz","Blitz.exe");
+}
+
+function blitzInstalledCheck() : boolean
+{
+	const blitzPath = blitzPathString();
+	if( fs.existsSync(blitzPath))
+	{
+		return true;
+	}
+	blitzInstallMessage();
+	return false;
+}
+
+async function blitzInstallMessage()
+{
+	await vscode.window.showWarningMessage("Visit https://natestah.com to install Blitz Search Tool..","Visit Natestah.com");
+	vscode.env.openExternal(Uri.parse("https://natestah.com/download"));
+}
+
 function writeContextCommand( commandName :string )
 {
 	var editor = vscode.window.activeTextEditor;
@@ -14,22 +41,7 @@ function writeContextCommand( commandName :string )
 		return;
 	}
 	
-	var fs = require('fs');
-	let stringname = process.env.APPDATA;
-	var path = require('path');
-
-
-	let exeDir = process.env.PROGRAMFILES;
-	const blitzPath = path.join(exeDir,"Blitz","Blitz.exe");
-
-
-	const userPath = path.join(stringname,"NathanSilvers","POORMANS_IPC");
-
-	if( !fs.existsSync(blitzPath))
-	{
-		vscode.window.showErrorMessage("Visit https://natestah.com to install Blitz Search Tool..");
-		return;
-	}
+	const userPath = path.join(appDataPath,"NathanSilvers","POORMANS_IPC");
 
 	if( !fs.existsSync(userPath))
 	{
@@ -79,7 +91,7 @@ function writeContextCommand( commandName :string )
 	}
 
 	const spawn = require('child_process').spawn;
-	spawn(blitzPath);
+	spawn(blitzPathString());
 }
 
 
@@ -156,19 +168,31 @@ export function activate(context: vscode.ExtensionContext)
 	// The commandId parameter must match the command field in package.json
 	let set_search_command = vscode.commands.registerCommand('blitzsearch.searchThis', () => 
 	{
-		writeContextCommand("SET_SEARCH");
+		if( blitzInstalledCheck() )
+		{
+			writeContextCommand("SET_SEARCH");
+		}
 	});
 
 	let set_replace_command = vscode.commands.registerCommand('blitzsearch.replaceThis', () => 
 	{
-		writeContextCommand("SET_REPLACE");
+		if( blitzInstalledCheck() )
+		{
+			writeContextCommand("SET_REPLACE");
+		}
 	});
 
 
 	let configure_theme_command = vscode.commands.registerCommand('blitzsearch.configureTheme', () => 
 	{
-		extractCurrentTheme();
+		if( blitzInstalledCheck() )
+		{
+			extractCurrentTheme();
+		}
+
 	});
+
+	blitzInstalledCheck();
 
 
 	context.subscriptions.push(set_search_command);
